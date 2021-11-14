@@ -1,9 +1,9 @@
 .sidebar{
-    flex: 3;
+    flex: 4;
     /* font-family: 'Josefin Sans', sans-serif; */
     font-family: 'Varela Round', sans-serif;
     /* font-family: 'Varela Round', sans-serif; */
-    margin: 20px;
+    /* margin: 10px; */
     padding-bottom: 30px;
     background-color: #fdfbfb;
     border-radius: 10px;

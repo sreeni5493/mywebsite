@@ -7,7 +7,6 @@
     display: flex;
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
-    z-index: 999;
 }
 
 .topLeft, .topRight{
@@ -22,8 +21,8 @@
 }
 
 .topImage{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     object-fit: cover;
 }   
