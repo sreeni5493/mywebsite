@@ -6,23 +6,30 @@
   align-items: center;
   justify-content: center;
   position: relative;
-
+ 
   .arrow {
     height: 50px;
     position: absolute;
     cursor: pointer;
 
     @include mobile {
-      display: none;
+      // display: none;
+      height: 20px;
     }
 
     &.left {
       left: 100px;
+      @include mobile{
+        left: 0px;
+      }
       transform: rotateY(180deg);
     }
 
     &.right {
       right: 100px;
+      @include mobile{
+        right: 0px;
+      }
     }
   }
 
@@ -33,11 +40,11 @@
     left: 0;
     transition: all 1s ease-out;
 
-    @include mobile {
-      height: 100vh;
-      flex-direction: column;
-      justify-content: center;
-    }
+    // @include mobile {
+    //   height: 100vh;
+    //   flex-direction: column;
+    //   justify-content: center;
+    // }
 
     .container {
       width: 100vw;
@@ -148,6 +155,7 @@
               // width: 80%;
               // height: 80%
               height: 3rem;
+              // width: 100%;
             }
           }
         }

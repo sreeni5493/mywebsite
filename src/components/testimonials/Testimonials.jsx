@@ -16,7 +16,7 @@ export default function Testimonials() {
     {
       id: 2,
       name: "Siddhant Toknekar",
-      title: "Co-Founder of DELKA",
+      title: "IIT Madras",
       img:
       "/assets/sidhant.png",
       icon: "assets/linkedin.png",
@@ -44,7 +44,7 @@ export default function Testimonials() {
         {data.map((d) => (
           <div className={d.featured ? "card featured" : "card"}>
             <div className="top">
-              <img src="assets/right-arrow.png" className="left" alt="" />
+              {/* <img src="assets/right-arrow.png" className="left" alt="" /> */}
               <img
                 className="user"
                 src={d.img}

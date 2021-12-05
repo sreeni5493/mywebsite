@@ -39,7 +39,8 @@
         width: 300px;
         height: 30px;
         font-size: 14px;
-
+        border: none;
+        border-radius: 10px;
         @include mobile {
           width: 200px;
           height: 20px;
@@ -50,6 +51,8 @@
         width: 300px;
         height: 200px;
         font-size: 14px;
+        border: none;
+        border-radius: 10px;
 
         @include mobile {
           width: 200px;
@@ -57,7 +60,7 @@
         }
       }
 
-      .button {
+      button {
         width: 150px;
         height: 30px;
         color: white;
@@ -71,7 +74,6 @@
           outline: none;
         }
       }
-
       span {
         color: green;
       }
