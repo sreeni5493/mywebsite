@@ -1,57 +1,41 @@
-import "./topbar.css";
-// import logo from "../assets/logo.jpg";
-import userIcon from "../assets/user_icon.jpg";
-import { Link } from "react-router-dom";
+import "./topbar.scss";
+import { Person, Mail, Home, LinkedIn, Facebook, Instagram } from "@material-ui/icons";
+// import HomeIcon from '@mui/icons-material/Home';
 
-export default function TopBar() {
-  const user = false;
+export default function Topbar({ menuOpen, setMenuOpen }) {
   return (
-    <div className="top">
-      <div className="topLeft">
-        {/* <i className="topIcon fab fa-linkedin"></i>
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i> */}
-        {/* <img className="logo" src={logo} alt="My Logo"></img> */}
-      </div>
-      <div className="topCenter">
-        <ul className="topList">
-          <li className="topListItem">
-            <Link className="link" to="/">
-              HOME
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/about">
-              ABOUT
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/write">
-              WRITE
-            </Link>
-          </li>
-          <li className="topListItem">{user && "LOGOUT"}</li>
-        </ul>
-      </div>
-      <div className="topRight">
-        {user ? (
-          <img className="topImage" src={userIcon} alt=""></img>
-        ) : (
-          <ul className="topList">
-            <li className="topListItem">
-              <Link className="link" to="/login">
-                LOGIN
-              </Link>
-            </li>
-            <li className="topListItem">
-              <Link className="link" to="/register">
-                REGISTER
-              </Link>
-            </li>
-          </ul>
-        )}
-
-        <i className="topSearchIcon fas fa-search"></i>
+    <div className={"topbar " + (menuOpen && "active")}>
+      <div className="wrapper">
+        <div className="left">
+          <a href="#intro" className="logo">
+            <Home />
+          </a>
+          <div className="iconItemContainer">
+            <LinkedIn className="icon" onClick={() => window.open('https://www.linkedin.com/in/sreenivas-narasimha-murali-5b3b88187/')}/>
+          </div>
+          <div className="iconItemContainer">
+            <Facebook className="icon" onClick={() => window.open('https://www.facebook.com/unknown5493/')}/>
+          </div>
+          <div className="iconItemContainer">
+            <Instagram className="icon" onClick={() => window.open('https://www.instagram.com/sreeni5493/')}/>
+          </div>
+          <div className="itemContainer">
+            <Person className="icon" />
+            <span>+919952940461</span>
+          </div>
+          <div className="itemContainer">
+            <Mail className="icon" />
+            <span>sreenivas@karomi.com</span>
+          </div>
+          
+        </div>
+        <div className="right">
+          <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
+            <span className="line1"></span>
+            <span className="line2"></span>
+            <span className="line3"></span>
+          </div>
+        </div>
       </div>
     </div>
   );
