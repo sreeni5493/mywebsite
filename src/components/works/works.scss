@@ -1,12 +1,12 @@
 @import "../../global.scss";
 
 .works {
-  background-color: #4E4F50;
+  background-color: #4e4f50;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
- 
+
   .arrow {
     height: 50px;
     position: absolute;
@@ -19,7 +19,7 @@
 
     &.left {
       left: 100px;
-      @include mobile{
+      @include mobile {
         left: 0px;
       }
       transform: rotateY(180deg);
@@ -27,7 +27,7 @@
 
     &.right {
       right: 100px;
-      @include mobile{
+      @include mobile {
         right: 0px;
       }
     }
@@ -52,6 +52,13 @@
       align-items: center;
       justify-content: center;
 
+      // @include mobile {
+      //   width: 80%;
+      //   display: inline-block;
+      //   flex-direction: column;
+      //   justify-content: center;
+      // }
+
       .item {
         width: 700px;
         height: 100%;
@@ -62,8 +69,12 @@
         justify-content: center;
 
         @include mobile {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-radius: 50px;
           width: 80%;
-          height: 150px;
+          height: 335px;
           margin: 15px 0;
         }
 
@@ -73,7 +84,17 @@
           display: flex;
           align-items: center;
           justify-content: center;
-
+          @include mobile {
+            // text-align: center;
+            display: flex;
+            flex: 0.5;
+            flex-direction: column;
+            justify-content: center;
+            // border-radius: 50px;
+            // width: 80%;
+            // height: 300px;
+            // margin: 15px 0;
+          }
           .leftContainer {
             width: 90%;
             height: 70%;
@@ -90,44 +111,49 @@
               align-items: center;
               justify-content: center;
 
-              @include mobile {
-                width: 20px;
-                height: 20px;
-              }
+              // @include mobile {
+              //   // margin: 0px;
+              //   // font-size: 8px;
+              //   // flex: 0.3
+              // }
 
               img {
                 width: 25px;
 
-                @include mobile {
-                  width: 15px;
-                }
+                // @include mobile {
+                //   // width: 15px;
+                //   flex: 0.5;
+                // }
               }
             }
             h2 {
               margin: 5px 0;
               font-size: 20px;
 
-              @include mobile{
-                margin: 0px;
-                font-size: 10px;
-              }
+              // @include mobile {
+              //   // margin: 0px;
+              //   // font-size: 8px;
+              //   // flex: 0.3;
+              //   font-size: 10px;
+              // }
             }
             h3 {
               margin: 5px 0;
               font-size: 15px;
 
-              @include mobile{
-                margin: 0px;
-                font-size: 8px;
-              }
+              // @include mobile {
+              //   // margin: 0px;
+              //   // font-size: 8px;
+              //   flex: 0.5
+              // }
             }
             p {
               margin: 5px 0;
               font-size: 13px;
-              @include mobile{
-                margin-top: 3px;
-                font-size: 6px;
-                // display: none;
+              @include mobile {
+                // margin: 0px;
+                font-size: 7.5px;
+                // flex: 0.3
               }
             }
             span {
@@ -139,22 +165,31 @@
           }
         }
         .right {
-          flex: 0.5;
+          flex: 0.3;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
-
+          @include mobile {
+            display: flex;
+            flex: 0.3;
+            flex-direction: column;
+            justify-content: center;
+            // border-radius: 50px;
+            // width: 80%;
+            // height: 300px;
+            // margin: 15px 0;
+          }
           img {
             cursor: pointer;
             // width: 80%;
             // height: 80%;
             // transform: rotate(-10deg);
-            @include mobile{
+            @include mobile {
               // width: 80%;
               // height: 80%
-              height: 3rem;
+              height: 3.25rem;
               // width: 100%;
             }
           }
