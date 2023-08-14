@@ -24,7 +24,7 @@ export default function Intro() {
             AI <span ref={textRef}></span>
           </h3>
           <h2 className="company">
-            ManageArtworks
+            Bosch Global Software Technologies
           </h2>
           <a href="#works">
           <img src="assets/down.png" alt="" />
